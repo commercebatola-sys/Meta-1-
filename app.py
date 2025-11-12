@@ -1,4 +1,4 @@
-# # app.py
+# app.py
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -17,7 +17,7 @@ os.makedirs(DATA_FOLDER, exist_ok=True)
 os.makedirs(CONV_FOLDER, exist_ok=True)
 
 st.markdown("<h1 style='text-align:center;'>📊 Analyse Prédictive & Chat IA (Open-Source)</h1>", unsafe_allow_html=True)
-st.write("Interface: upload → analyse → dashboard → conseils → chat avec historique.")
+st.write("Interface: upload -> analyse -> dashboard -> conseils -> chat avec historique.")
 
 # ---- Sidebar: client identification + branding ----
 st.sidebar.header("Paramètres client")
@@ -108,9 +108,9 @@ if uploaded_file:
     mean_pred = float(np.mean(preds)) if 'preds' in locals() else None
     if mean_pred is not None:
         if mean_pred > y.mean():
-            st.info("Conseil (règle): Les prévisions sont supérieures à la moyenne historique → vérifier stocks & préparer approvisionnement.")
+            st.info("Conseil (règle): Les prévisions sont supérieures à la moyenne historique -> vérifier stocks & préparer approvisionnement.")
         else:
-            st.info("Conseil (règle): Les prévisions sont basses → envisager promotions/marketing pour stimuler les ventes.")
+            st.info("Conseil (règle): Les prévisions sont basses -> envisager promotions/marketing pour stimuler les ventes.")
 
     st.write("Conseils par IA (fallback heuristique) :")
     st.write("- Vérifier produits avec baisse de ventes.\n- Réduire stock pour produits à faible demande.\n- Augmenter pub pour produits en hausse.\n- Vérifier saisonnalité.\n- Préparer plan de promotion pour prochaines périodes.")
