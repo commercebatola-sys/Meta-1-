@@ -1,0 +1,5 @@
+openai==1.51.0
+PyPDF2
+python-docx
+PyMuPDF
+streamlit
